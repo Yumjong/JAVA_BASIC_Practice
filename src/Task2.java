@@ -7,6 +7,9 @@ public class Task2 {
 		Scanner scanner = new Scanner(System.in);
 		String inputValue = scanner.nextLine();
 		Task2Class.result(inputValue);
+		
+		
+		scanner.close();
 	}
 
 }

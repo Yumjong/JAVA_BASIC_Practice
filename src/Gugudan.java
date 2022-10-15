@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class Gugudan {
 	public static int[] calculate(int times) {

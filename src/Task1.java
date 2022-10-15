@@ -7,5 +7,7 @@ public class Task1 {
 		int number = scanner.nextInt();
 		System.out.println("입력한 값은:" + number);
 		Task1Class.input(number);
+		
+		scanner.close();
 	}
 }
