@@ -9,10 +9,14 @@ public class CalendarPrompt {
 			Calendar cal =new Calendar();
 			
 			int month = -1;
+			int year = 2022;
 			
 			while(true) {
+				System.out.println("년도를 입려하세요");
+				System.out.print("Year> ");
+				year = scanner.nextInt();
 				System.out.println("달을 입력하세요:");
-				System.out.print(PROMPT);
+				System.out.print("Month> ");
 				month = scanner.nextInt();
 				if(month == -1) {
 					break;
@@ -22,7 +26,7 @@ public class CalendarPrompt {
 				
 //				System.out.printf("%d월은 %d일까지 있습니다. \n", month, cal.getMaxDaysOfMonth(month));
 				
-				cal.printCaldar(2022, month);
+				cal.printCaldar(year, month);
 			}
 			
 			System.out.println("bye~");
