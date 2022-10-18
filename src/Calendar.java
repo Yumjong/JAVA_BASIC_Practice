@@ -21,19 +21,36 @@ public class Calendar {
 
 	}
 
-	public void printCaldar(int year,int month) {
+	public void printCaldar(int year,int month, int weekDay) {
 		System.out.printf("   <<%4d년%3d월>> \n",year, month);
 		System.out.println(" SU MO TU WE TE FR SA");
 		System.out.println("---------------------");
 		
-		int maxDay = getMaxDaysOfMonth(year,month);
+		//print blank space
+		for(int i =0; i < weekDay; i++) {
+			System.out.print("   ");
+		}
 		
-		for(int i = 1; i <= maxDay; i++) {
+		int maxDay = getMaxDaysOfMonth(year,month);
+		int count = 7 - weekDay;
+		int delim = (count < 7) ? count : 0;
+		
+		//print first line
+		for(int i = 1; i <= count; i++){
 			System.out.printf("%3d",i);
-			if( i % 7 == 0) {
+		}
+		System.out.println();
+		
+		//print from second line to last line
+		
+		count++;
+		for(int i = count; i <= maxDay; i++) {
+			System.out.printf("%3d",i);
+			if( i % 7 == delim) {
 				System.out.println();
 			}
 		}
+		System.out.println();
 		System.out.println();
 		
 //		System.out.println(" 1  2  3  4  5  6  7 ");
