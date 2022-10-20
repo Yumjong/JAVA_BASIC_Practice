@@ -30,7 +30,6 @@ public class CalendarPrompt {
 			
 			int month = -1;
 			int year = 2022;
-			int weekDay = 0;
 			
 			while(true) {
 				System.out.println("년도를 입려하세요.(exit: -1)");
@@ -46,16 +45,13 @@ public class CalendarPrompt {
 					System.out.println("잘 못된 입력값입니다.");
 					continue;
 				}
-				System.out.println("첫째 날의 요일을 입력하세요(su, mo, tu, we, th, fr, sa)");
-				String str_weekDay = scanner.next();
-				weekDay = parseDay(str_weekDay);
-				
 //				System.out.printf("%d월은 %d일까지 있습니다. \n", month, cal.getMaxDaysOfMonth(month));
 				
-				cal.printCaldar(year, month, weekDay);
+				cal.printCaldar(year, month);
 			}
 			
 			System.out.println("bye~");
+			scanner.close();
 		}
 		
 
